@@ -10,18 +10,19 @@ class HeaderPage extends StatelessWidget {
       color: const Color(0xFF58B0F0),
       child:
           // Layout flex pour afficher 3 boutons horizontal
+
           Padding(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.all(8.0),
         child: Flex(
           direction: Axis.horizontal,
           // Les 3 boutons
           children: [
-            Expanded(child: HeaderButton("assets/icons/pencil.png")),
+            HeaderButton("assets/icons/pencil.png"),
             const Expanded(
                 child: Text("Accueil",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white))),
-            Expanded(child: HeaderButton("assets/icons/search.png")),
+            HeaderButton("assets/icons/search.png"),
           ],
         ),
       ),

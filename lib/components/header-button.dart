@@ -7,10 +7,11 @@ class HeaderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Padding(
+        padding: const EdgeInsets.all(8),
         child: IconButton(
-      icon: Image.asset(imageURI),
-      onPressed: () => {print("clic")},
-    ));
+          icon: Image.asset(imageURI),
+          onPressed: () => {print("clic")},
+        ));
   }
 }
