@@ -1,11 +1,13 @@
-import 'package:eni_demo/header-button.dart';
+import 'package:eni_demo/components/header-button.dart';
 import 'package:flutter/material.dart';
 
 class HeaderPage extends StatelessWidget {
+  const HeaderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF58B0F0),
+      color: const Color(0xFF58B0F0),
       child:
           // Layout flex pour afficher 3 boutons horizontal
           Padding(
@@ -14,9 +16,12 @@ class HeaderPage extends StatelessWidget {
           direction: Axis.horizontal,
           // Les 3 boutons
           children: [
-            HeaderButton("Nouveau"),
-            HeaderButton("Accueil"),
-            HeaderButton("Rechercher"),
+            Expanded(child: HeaderButton("assets/icons/pencil.png")),
+            const Expanded(
+                child: Text("Accueil",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white))),
+            Expanded(child: HeaderButton("assets/icons/search.png")),
           ],
         ),
       ),
