@@ -1,8 +1,5 @@
-import 'dart:ui';
-
-import 'package:eni_demo/content-page.dart';
-import 'package:eni_demo/footer-page.dart';
-import 'package:eni_demo/header-page.dart';
+import 'package:eni_demo/pages/demo-widget.dart';
+import 'package:eni_demo/pages/eni-demo-page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,32 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Page d'accueil
-      home: const EniDemoPage(),
-    );
-  }
-}
-
-class EniDemoPage extends StatelessWidget {
-  const EniDemoPage({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Twitter'),
-      ),
-
-      // Corps de la page
-      body: Flex(
-        direction: Axis.vertical,
-        children: [
-          // HEADER
-          HeaderPage(),
-          // CONTENT
-          ContentPage(),
-          // FOOTER
-          FooterPage()
-        ],
-      ),
+      // home: const EniDemoPage(),
+      home: DemoWidgetPage(),
     );
   }
 }
