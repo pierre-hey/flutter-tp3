@@ -1,4 +1,4 @@
-import 'package:eni_demo/footer-button.dart';
+import 'package:eni_demo/components/footer-button.dart';
 import 'package:flutter/material.dart';
 
 class FooterPage extends StatelessWidget {
