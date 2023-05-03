@@ -1,4 +1,5 @@
 import 'package:eni_demo/pages/demo-col-row.dart';
+import 'package:eni_demo/pages/demo-list-view.dart';
 import 'package:eni_demo/pages/demo-widget.dart';
 import 'package:eni_demo/pages/eni-demo-page.dart';
 import 'package:eni_demo/pages/test-anim.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Page d'accueil
-      home: DemoColRow(),
+      home: DemoListView(),
+      //home: DemoColRow(),
       //home: const EniDemoPage(),
       //home: DemoWidgetPage(),
       //home: MyStatefulWidget(),
