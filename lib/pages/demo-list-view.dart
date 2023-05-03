@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DemoListView extends StatelessWidget {
-  var lists = ["Titi", "Toto", "Tata"];
+  var lists = [
+    "Titi",
+    "Toto",
+    "Tata",
+  ];
 
   @override
   Widget build(BuildContext context) {
