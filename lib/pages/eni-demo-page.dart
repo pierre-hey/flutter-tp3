@@ -4,8 +4,8 @@ import '../content-page.dart';
 import '../footer-page.dart';
 import '../header-page.dart';
 
-class EniDemoPage extends StatelessWidget {
-  const EniDemoPage({super.key});
+class TwitterPage extends StatelessWidget {
+  const TwitterPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -21,11 +21,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Page d'accueil
-      home: DemoListView(),
+
+      home: const TwitterPage(),
       //home: DemoColRow(),
-      //home: const EniDemoPage(),
       //home: DemoWidgetPage(),
       //home: MyStatefulWidget(),
+      //home: DemoListView(),
     );
   }
 }
