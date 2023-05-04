@@ -1,5 +1,6 @@
 import 'package:eni_demo/pages/demo-col-row.dart';
 import 'package:eni_demo/pages/demo-list-view.dart';
+import 'package:eni_demo/pages/demo-stateful-widget-page.dart';
 import 'package:eni_demo/pages/demo-widget.dart';
 import 'package:eni_demo/pages/eni-demo-page.dart';
 import 'package:eni_demo/pages/test-anim.dart';
@@ -22,11 +23,12 @@ class MyApp extends StatelessWidget {
       ),
       // Page d'accueil
 
-      home: const TwitterPage(),
+      //  home: const TwitterPage(),
       //home: DemoColRow(),
       //home: DemoWidgetPage(),
       //home: MyStatefulWidget(),
       //home: DemoListView(),
+      home: DemoStatefulPage(),
     );
   }
 }
