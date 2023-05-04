@@ -13,8 +13,10 @@ class ContentPage extends StatelessWidget {
             // Tout le contenu
             children: [
           // FORMULAIRE CONNEXION
-          FormLogin(),
-
+          //Stateless
+          //FormLogin(),
+          // Statefull
+          FormLoginStateFull(),
           // Bloc du tweet
           TweetItem(),
         ]));

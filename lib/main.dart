@@ -22,13 +22,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Page d'accueil
-
-      //  home: const TwitterPage(),
+      home: const TwitterPage(),
       //home: DemoColRow(),
       //home: DemoWidgetPage(),
       //home: MyStatefulWidget(),
       //home: DemoListView(),
-      home: DemoStatefulPage(),
+      // home: DemoStatefulPage(),
     );
   }
 }
