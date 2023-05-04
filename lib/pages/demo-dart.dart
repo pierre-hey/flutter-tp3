@@ -11,11 +11,11 @@ class Person {
   */
 
   // Constructeur manière 2
-  //Person(this.firstname, this.lastname);
+  Person(this.firstname, this.lastname);
 
   // Constructeur manière 3
   // Avec des paramètre optionnel
-  Person({this.firstname, this.lastname});
+  // Person({this.firstname, this.lastname});
 }
 
 // fonctions/méthode
