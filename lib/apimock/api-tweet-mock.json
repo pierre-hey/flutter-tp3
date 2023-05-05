@@ -1,0 +1,40 @@
+{
+    "tweets": [
+        {
+            "id": 1,
+            "author": "Bruno",
+            "message" : "Chocolatine ananas, J'adore la mal bouffe mais je paie le prix cher aprés",
+            "img":"https://cataas.com/cat"
+        },
+        {
+            "id": 2,
+            "author": "Julien",
+            "message" : "Crevette Nutella, Alors la non je ne suis pas d'accord",
+            "img":"https://cataas.com/cat"
+        },
+        {
+            "id": 3,
+            "author": "Marie",
+            "message" : "No comment",
+            "img":"https://cataas.com/cat"
+        },
+        {
+            "id": 4,
+            "author": "Manuel",
+            "message" : "Qu'est ce que je fais ici ?",
+            "img":"https://cataas.com/cat"
+        },
+        {
+            "id": 5,
+            "author": "Alexis",
+            "message" : "Coucou",
+            "img":"https://cataas.com/cat"
+        },
+        {
+            "id": 6,
+            "author": "Anonyme",
+            "message" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun",
+            "img":"https://cataas.com/cat"
+        }
+    ]
+}

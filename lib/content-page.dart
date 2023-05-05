@@ -18,7 +18,8 @@ class ContentPage extends StatelessWidget {
           // Statefull
           FormLoginStateFull(),
           // Bloc du tweet
-          TweetItem(),
+          //  TweetItem(),
+          TweetItemFul()
         ]));
   }
 }
