@@ -1,3 +1,4 @@
+import 'package:eni_demo/demo/demo-api/demo-api-page.dart';
 import 'package:eni_demo/pages/eni-demo-page.dart';
 import 'package:flutter/material.dart';
 
@@ -19,12 +20,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Page d'accueil
-      home: const TwitterPage(),
+      //home: const TwitterPage(),
       //home: DemoColRow(),
       //home: DemoWidgetPage(),
       //home: MyStatefulWidget(),
       //home: DemoListView(),
       // home: DemoStatefulPage(),
+      home: DemoApiPage(),
     );
   }
 }
