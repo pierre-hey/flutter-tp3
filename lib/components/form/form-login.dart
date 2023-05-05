@@ -100,7 +100,7 @@ class _FormLogin extends State<FormLoginStateFull> {
     setState(() {
       success
           ? errorMessage = ""
-          : errorMessage = "Erreur, les champs sont invalide";
+          : errorMessage = "Erreur, les champs sont invalides";
     });
   }
 }
