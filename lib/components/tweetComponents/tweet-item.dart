@@ -5,6 +5,46 @@ import 'package:eni_demo/dto/tweet-dto.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+/*
+class RandomCatPhoto extends StatefulWidget {
+  @override
+  _RandomCatPhotoState createState() => _RandomCatPhotoState();
+}
+
+class _RandomCatPhotoState extends State<RandomCatPhoto> {
+  String? _imageUrl;
+
+  Future<void> _fetchCatPhoto() async {
+    final response =
+        await http.get(Uri.parse('https://api.thecatapi.com/v1/images/search'));
+    final data = jsonDecode(response.body);
+    setState(() {
+      _imageUrl = data[0]['url'];
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchCatPhoto();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 10.0,
+      width: 10.0,
+      child: _imageUrl == null
+          ? CircularProgressIndicator()
+          : Image.network(
+              _imageUrl!,
+              // fit: BoxFit.fill,
+            ),
+    );
+  }
+}
+
+*/
 class TweetItem extends StatelessWidget {
   TweetDto tweet;
   TweetItem(this.tweet, {super.key});
@@ -20,10 +60,14 @@ class TweetItem extends StatelessWidget {
             // PHOTO
             Expanded(
               flex: 2, // 20%
-              child: Container(
-                height: 120.0,
-                width: 120.0,
-                child: Image.network("https://cataas.com/cat"),
+              // child: RandomCatPhoto(),
+              child: SizedBox(
+                // height: 120.0,
+                // width: 120.0,
+                child: Image.network(
+                  tweet.img!,
+                  fit: BoxFit.fill,
+                ),
 
                 /*decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -39,7 +83,7 @@ class TweetItem extends StatelessWidget {
             Expanded(
               flex: 8, // 80%
               child: Container(
-                color: Color.fromARGB(255, 215, 233, 241),
+                color: const Color.fromARGB(255, 215, 233, 241),
                 child: Flex(direction: Axis.vertical, children: [
                   Flex(
                     direction: Axis.vertical,
@@ -56,13 +100,13 @@ class TweetItem extends StatelessWidget {
                               child: Text(tweet.author!),
                             ),
                             // Time
-                            Text("50s")
+                            const Text("50s")
                           ],
                         ),
                       ),
                       //Message du tweet
                       Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         //child: Text(
                         //      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"),
                         child: Text(tweet.message!),
@@ -92,6 +136,10 @@ class TweetItem extends StatelessWidget {
   }
 }
 
+void wait(int? sec) async {
+  await Future<void>.delayed(Duration(seconds: sec!));
+}
+
 class TweetItemFul extends StatefulWidget {
   @override
   State<TweetItemFul> createState() {
@@ -104,7 +152,7 @@ class TweetItemPageState extends State<TweetItemFul> {
 
   void callApi() async {
     var response = await http.get(Uri.parse(
-        "https://raw.githubusercontent.com/Chocolaterie/EniFlutterHCDA091/master/api/tweets.json"));
+        "https://raw.githubusercontent.com/pierre-hey/flutter-tp3/main/lib/apimock/api-tweet-mock.json"));
 
     if (response.statusCode == 200) {
       const JsonDecoder decoder = JsonDecoder();
@@ -123,12 +171,19 @@ class TweetItemPageState extends State<TweetItemFul> {
 
   @override
   Widget build(BuildContext context) {
-    callApi();
+    //callApi();
     return Expanded(
         child: ListView.builder(
             itemCount: tweets.length,
             itemBuilder: (BuildContext context, int index) {
               return TweetItem(tweets[index]);
             }));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) => callApi());
   }
 }
