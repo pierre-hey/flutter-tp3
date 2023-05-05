@@ -1,3 +1,5 @@
+import 'package:eni_demo/demo/demo-user-provider/user-detail-page.dart';
+import 'package:eni_demo/demo/demo-user-provider/user-provider-app.dart';
 import 'package:eni_demo/pages/demo-col-row.dart';
 import 'package:eni_demo/pages/demo-list-view.dart';
 import 'package:eni_demo/pages/demo-stateful-widget-page.dart';
@@ -8,6 +10,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+
+  //runApp(const UserProviderApp());
 }
 
 // Application Flutter
